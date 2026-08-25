@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+    <script src="Scripts/script_name.js"></script>
+    <script src="Scripts/kods-script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Styles/main.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    
+    <header>
+
+			<div>
+
+			<div>
+
+				<h1> KOMIKSY</h1>
+
+			</div>
+			<div>
+                <form id="codeForm">
+                    <label for="kod">Podaj kod:</label><br>
+                    <input id="kod" type="text" maxlength="4" placeholder="1234" required>
+                    <button type="submit">OK</button>
+
+                </form>
+            <div id="codeHistory">
+                <h3 style="text-align: left;">Wpisane kody:</h3>
+                <ul id="codeList"></ul>
+                </br>
+                </br>
+                </br>
+            </div>
+
+			</div>
+
+
+			</div>
+
+	</header>
+
+
+    <main>
+      
+		<div class="gallery-type0">
+			<div class="grid">
+				<div> <img class="locked" data-code="0001" class="tile" style="width: 100%" src="Comics/01/01.png" onclick="openModal();currentSlide(1)"> </div>
+				<div> <img class="locked" data-code="0002" src="Comics/02/01.png" onclick="openModal();currentSlide(2)"> </div>
+				<div> <img class="locked" data-code="0003" src="Comics/03/01.png" onclick="openModal();currentSlide(3)"> </div>
+				<div> <img class="locked" data-code="0004" src="Comics/04/01.png" onclick="openModal();currentSlide(1)"> </div>
+				<div> <img class="locked" data-code="0005" src="Comics/05/01.png" onclick="openModal();currentSlide(2)"> </div>
+				<div> <img class="locked" data-code="0006" src="Comics/06/01.png" onclick="openModal();currentSlide(3)"> </div>
+				<div> <img class="locked" data-code="0007" src="Comics/07/01.png" onclick="openModal();currentSlide(1)"> </div>
+			</div>
+
+		</div>
+
+		<div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext"> Komisks 1</div>
+                        <div class="gallery-container">
+                            <img src="Comics/01/01.png" >
+                            <img src="Comics/01/02.png" class="locked" data-code="0023">
+                            <img src="Comics/01/03.png" class="locked" data-code="0458">
+                            <img src="Comics/01/04.png" class="locked" data-code="0812">
+                            <img src="Comics/01/05.png" class="locked" data-code="0945">
+                            <img src="Comics/01/06.png" class="locked" data-code="0204">
+                            <img src="Comics/01/07.png" class="locked" data-code="0111">
+                        </div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">Komisks 2</div>
+                          <div class="gallery-container">
+                            <img src="Comics/02/01.png">
+                            <img src="Comics/02/02.png" class="locked" data-code="1063">
+                            <img src="Comics/02/03.png" class="locked" data-code="1458">
+                            <img src="Comics/02/04.png" class="locked" data-code="1812">
+                            <img src="Comics/02/05.png" class="locked" data-code="1945">
+                            <img src="Comics/02/06.png" class="locked" data-code="1204">
+                            <img src="Comics/02/07.png" class="locked" data-code="1111">
+                        </div>
+                    </div>
+
+
+
+                    <!-- Caption-->
+                    <div class="caption-container">
+                    <p id="caption"></p>
+                    </div>
+
+                </div>
+            </div>
+
+	</main>
+
+	<footer>
+
+		<div class= "end">
+		<h3>Copy right short information </h3>
+		</div>
+		<h2> All rights reserved or sth like that</h2>
+	</footer>
+
+
+  </body>
+
+
+<script src="Scripts/gallery01-script.js"></script>
+</html>

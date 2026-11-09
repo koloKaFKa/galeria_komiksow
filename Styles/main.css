@@ -1,3 +1,12 @@
+:root {
+  --background: #CCC;   /*var(--background)*/
+  --main: #222;         /*var(--main)*/
+  --detail: #27AEAE;    /*var(--detail)*/
+
+  --gif-texture: url("noisev3.gif");
+  --gif-texture0: url("noisev4.gif");
+  --noise-texture: url("noise.webb");
+}
 /* Resetowanie domyślnych stylów */
 
 * {
@@ -6,20 +15,19 @@
     box-sizing: border-box;
 
 
-    font-family:
-    'Brush Script MT', cursive;
+    font-family: 'Comic Sans';
 }
 	/* They see me scroolin' */
-/*html::-webkit-scrollbar{
+html::-webkit-scrollbar{
   width: 0.7em;
 }
 html::-webkit-scrollbar-track {
-  background: black;
+  background: var(--main);
 }
 html::-webkit-scrollbar-thumb {
-  background: white;
-  outline: 5px black;
-}*/
+  background: var(--detail);
+  outline: 5px var(--main);
+}
 
 body {
    
@@ -27,7 +35,7 @@ body {
   background-size:100%;
   background-attachment: fixed;
   background-repeat:repeat-y;
-  background-color:#ddd;
+  background-color:var(--background);
   /*background-image:url("back.png");*/
   }
 
@@ -37,10 +45,16 @@ body {
     position:center;
     width: 100%;
     height: auto;
-    background-color:#ccc;
+    background-color:var(--main);
+    color: white;
     padding:2%;
     text-align: center;
 
+    border-style: solid none none none;
+    border-color: var(--detail);
+    border-radius: 0;
+    border-width: 1em;
+    font-size: 4em;
 
   }
 form{
@@ -95,12 +109,12 @@ li{
   }
 
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1600px) {
     .grid {
       grid-template-columns: 33%  33%  33% ;
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     .grid {
       grid-template-columns: 50%  50%;
     }
@@ -113,8 +127,9 @@ li{
 
   .grid img {
      width: 100%;
+     padding: 1em;
     height: auto;
-    border-radius: 0.5em;
+    border-radius: 1.5em;
     transition: 1s;
 
   }
@@ -134,7 +149,6 @@ li{
 
  /* The Modal (background) */
  .modal {
-
    display: none;
    position: fixed;
    z-index: 1;
@@ -149,30 +163,29 @@ li{
 
  /* Modal Content */
  .modal-content {
-
    border-radius: 1em;
-   background: #333;
+   background: var(--main);
    position: relative;
    margin: auto;
    padding: 0;
    width: 40%;
  }
 
- @media screen and (max-width: 1400px) {
+ @media screen and (max-width: 1600px) {
 
     .modal-content {
       width: 50%;
    }
  }
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1200px) {
    .modal-content {
      width: 70%;
    }
  }
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 1000px) {
    .modal-content {
         margin-top: -5%;
-     width: 90%;
+     width: 88%;
    }
  }
 
@@ -212,14 +225,14 @@ li{
  .close {
 
    z-index: 2;
-   color: #ddd;
+   color: white;
    position: sticky;
-   top: 1em;
+   top: 0.5em;
    margin-left:71%;
    right: 1em;
    font-size: 2.6em;
    font-weight: bold;
-   background-color: #222;
+   background-color: var(--main);
    padding:  1px 0.4em;
    border-radius: 1em;
    transition: 1s;
@@ -232,20 +245,20 @@ li{
  }
  @media screen and (max-width: 1000px) {
    .close {
-     margin-left:88%;
+     margin-left:87%;
    }
  }
  @media screen and (max-width: 600px) {
    .close {
-    top: 0.4em;
-     margin-left:90%;
+    top: 0.2em;
+     margin-left:92%;
      font-size: 2em;
    }
  }
  .close:hover,
 .close:focus {
   background-color: #111;
-  color: #eee;
+  color: var(--detail);
   text-decoration: none;
   cursor: pointer;
 }
@@ -258,8 +271,10 @@ li{
   cursor: pointer;
 }
 .numbertext{
+
+  font-size: 2em;
   color:white;
-  padding-top: 1%;
+  padding: 1%;
   text-align:center;
 }
 
@@ -268,7 +283,7 @@ li{
 footer {
   text-align: center;
   height:50%;
-  background: #ccc;
+  background: var(--detail);
 
 }
 
